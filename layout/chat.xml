@@ -98,8 +98,7 @@
                     android:background="@drawable/their_message"
                     android:elevation="2dp"
                     android:padding="10dp"
-                    android:text="Bonjour Khaoula ...
-                                  vous êtes dispnible mercredi matin?"
+                    android:text="Bonjour Khaoula ...vous êtes dispnible mercredi matin?"
                     android:textColor="#fff"
                     android:textSize="18dp" />
 
