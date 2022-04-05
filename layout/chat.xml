@@ -78,7 +78,7 @@
                     android:background="@drawable/my_message"
                     android:elevation="2dp"
                     android:padding="10dp"
-                    android:text="ana khaoula hhhhh"
+                    android:text="Bonjour Nourya ,comment vas-tu?"
                     android:textColor="#fff"
                     android:textSize="18dp" />
 
@@ -98,7 +98,8 @@
                     android:background="@drawable/their_message"
                     android:elevation="2dp"
                     android:padding="10dp"
-                    android:text="sd9aaat"
+                    android:text="Bonjour Khaoula ...
+                                  vous êtes dispnible mercredi matin?"
                     android:textColor="#fff"
                     android:textSize="18dp" />
 
@@ -118,7 +119,7 @@
                     android:background="@drawable/my_message"
                     android:elevation="2dp"
                     android:padding="10dp"
-                    android:text="kijak hadchiiiiiiiiiiiiiiiiiiiiiii"
+                    android:text="oui ....."
                     android:textColor="#fff"
                     android:textSize="18dp" />
 
