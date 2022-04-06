@@ -19,21 +19,76 @@
             android:gravity="clip_horizontal|center_vertical"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/imageView4"
-                android:layout_width="match_parent"
-                android:layout_height="200px"
-                android:layout_weight="1"
-                android:hint="search"
-                android:inputType="text"
-                android:text=""
-                app:srcCompat="@drawable/search" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="left"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:id="@+id/imageView4"
+                        android:layout_width="371dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@drawable/search"
+                        android:hint=".                .search"
+                        android:inputType="text"
+                        android:text=""
+                        app:srcCompat="@drawable/search" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="97dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/avt_removebg_preview" />
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="8dp"
+                        android:layout_height="54dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/profil"/>
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="Khaoula EL-BOUCHTI" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#8FCECA"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="active" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -54,6 +109,11 @@
                 android:layout_weight="1"
                 android:text="TextView" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,7 +125,7 @@
 
             <LinearLayout
                 android:id="@+id/nav_drawer"
-                android:layout_width="386dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
                 android:orientation="vertical">
@@ -98,7 +158,25 @@
                     android:background="@drawable/their_message"
                     android:elevation="2dp"
                     android:padding="10dp"
-                    android:text="Bonjour Khaoula ...vous êtes dispnible mercredi matin?"
+                    android:text="Bonjour Khaoula"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/messag_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="23:25"
+                    android:textSize="10dp" />
+                <TextView
+                    android:id="@+id/messg_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@drawable/their_message"
+                    android:elevation="2dp"
+                    android:padding="10dp"
+                    android:text="vous êtes dispnible mercredi matin?"
                     android:textColor="#fff"
                     android:textSize="18dp" />
 
@@ -132,17 +210,26 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="10dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"></LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="420dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:background="#8B7AAD"
                     android:orientation="horizontal">
 
+                    <ImageButton
+                        android:layout_width="56dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/add_removebg_preview"
+                        android:onClick="sendMessage"
+                        android:padding="20dp"
+                        android:scaleType="fitCenter" />
                     <EditText
                         android:id="@+id/editText"
                         android:layout_width="match_parent"
@@ -151,6 +238,7 @@
                         android:ems="10"
                         android:hint="Write a message"
                         android:inputType="text"
+                        android:textColor="@color/white"
                         android:paddingHorizontal="10dp"
                         android:text="" />
 
@@ -176,7 +264,6 @@
             android:background="#8B7AAD"
             android:gravity="clip_horizontal|center_vertical"
             android:orientation="horizontal">
-
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
