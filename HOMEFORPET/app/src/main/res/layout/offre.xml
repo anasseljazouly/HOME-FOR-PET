@@ -55,11 +55,12 @@
 
                     <TextView
                         android:id="@+id/textView4"
-                        android:layout_width="103dp"
+                        android:layout_width="112dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center|center_vertical"
-                        android:text="casablanca" />
+                        android:text="casablanca"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -191,7 +192,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Race"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
             </LinearLayout>
 
             <LinearLayout
@@ -212,7 +213,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Greyhound" />
+                    android:text="Greyhound"
+                    android:textColor="#808080"
+                    android:textSize="14dp"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
             </LinearLayout>
 
             <LinearLayout
@@ -220,14 +224,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="horizontal">
-
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
+                android:orientation="horizontal"/>
         </LinearLayout>
 
         <LinearLayout
@@ -266,7 +263,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Male"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
             </LinearLayout>
 
             <LinearLayout
@@ -283,10 +280,13 @@
                 android:orientation="horizontal">
 
                 <Switch
-                    android:id="@+id/switch1"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/switch3"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_weight="1"
+                    android:text="Switch" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -332,7 +332,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Location"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
             </LinearLayout>
 
             <LinearLayout
@@ -350,10 +350,14 @@
 
                 <TextView
                     android:id="@+id/textView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Casablanca" />
+                    android:gravity="center"
+                    android:text="Casablanca"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                    android:textColor="#808080"
+                    android:textSize="14dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -361,14 +365,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="horizontal">
-
-                <Spinner
-                    android:id="@+id/spinner2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
+                android:orientation="horizontal"/>
         </LinearLayout>
 
         <LinearLayout
@@ -406,7 +403,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Date of Birth"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
             </LinearLayout>
 
             <LinearLayout
@@ -427,7 +424,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="july 20, 2018" />
+                    android:text="july 20,2018"
+                    android:textSize="14dp"
+                    android:textColor="#808080"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
             </LinearLayout>
 
             <LinearLayout
@@ -437,9 +437,9 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/spinner3"
-                    android:layout_width="match_parent"
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
             </LinearLayout>
@@ -480,21 +480,24 @@
                     <TextView
                         android:id="@+id/textView13"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
                         android:layout_gravity="center|center_horizontal|center_vertical"
                         android:layout_weight="1"
                         android:gravity="center|center_horizontal|center_vertical"
                         android:text="Description:"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
 
                     <TextView
                         android:id="@+id/textView12"
                         android:layout_width="321dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
                         android:layout_gravity="center|center_horizontal|center_vertical"
                         android:layout_weight="1"
                         android:gravity="center|center_horizontal|center_vertical"
-                        android:text="The dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf) is a domesticated carnivore of the fam..." />
+                        android:text="The dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf) is a domesticated carnivore of the fam..."
+                        android:textSize="14dp"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        android:textColor="#808080" />
                 </LinearLayout>
 
             </LinearLayout>
