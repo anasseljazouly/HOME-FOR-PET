@@ -45,9 +45,9 @@
                         android:layout_gravity="left"
                         android:layout_weight="1"
                         android:background="@drawable/search"
-                        android:hint=".           search"
                         android:inputType="text"
                         android:text=""
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
                         app:srcCompat="@drawable/search" />
 
                 </LinearLayout>
@@ -59,7 +59,7 @@
 
                     <ImageView
                         android:id="@+id/imageView11"
-                        android:layout_width="97dp"
+                        android:layout_width="69dp"
                         android:layout_height="54dp"
                         android:layout_gravity="left"
                         android:layout_weight="1"
@@ -71,22 +71,25 @@
                         android:layout_height="54dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/profil"/>
+
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
-                        android:layout_height="45dp"
+                        android:layout_height="37dp"
                         android:layout_weight="1"
                         android:gravity="center|center_horizontal|center_vertical"
-                        android:text="Khaoula EL-BOUCHTI" />
+                        android:text="Khaoula EL-BOUCHTI"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
 
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:textColor="#8FCECA"
                         android:gravity="center|center_horizontal|center_vertical"
-                        android:text="active" />
+                        android:text="active"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        android:textColor="#8FCECA" />
 
                 </LinearLayout>
 
@@ -230,6 +233,7 @@
                         android:onClick="sendMessage"
                         android:padding="20dp"
                         android:scaleType="fitCenter" />
+
                     <EditText
                         android:id="@+id/editText"
                         android:layout_width="match_parent"
@@ -238,9 +242,10 @@
                         android:ems="10"
                         android:hint="Write a message"
                         android:inputType="text"
-                        android:textColor="@color/white"
                         android:paddingHorizontal="10dp"
-                        android:text="" />
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        android:textColor="@color/white" />
 
                     <ImageButton
                         android:layout_width="wrap_content"
