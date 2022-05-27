@@ -22,49 +22,45 @@ public class LoginActivity extends AppCompatActivity{
     private FirebaseAuth auth;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_in);
         getSupportActionBar().hide();
-        auth=FirebaseAuth.getInstance();
-        email=findViewById(R.id.email);
-        password=findViewById(R.id.password);
-        Button create = (Button)findViewById(R.id.sign_in_on_sign_in);
-        create.setOnClickListener(new View.OnClickListener() {
+        auth = FirebaseAuth.getInstance();
+        final EditText email = findViewById(R.id.email);
+        final EditText password = findViewById(R.id.password);
+        final ImageButton loginBtn = findViewById(R.id.sign_in_on_sign_in);
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,RegistrationActivity.class));
-
+                String userEmail = email.getText().toString();
+                String userPassword = password.getText().toString();
+                if (TextUtils.isEmpty(userEmail)) {
+                    Toast.makeText(LoginActivity.this, "Entrer l'e mail", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(userPassword)) {
+                    Toast.makeText(LoginActivity.this, "Entrer le password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (userPassword.length() < 8) {
+                    Toast.makeText(LoginActivity.this, "le mdp est too short, il faut au minimum 8 char", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                auth.signInWithEmailAndPassword(userEmail, userPassword)
+                        .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT);
+                                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                } else {
+                                    Toast.makeText(LoginActivity.this, "Error" + task.getException(), Toast.LENGTH_SHORT);
+                                }
+                            }
+                        });
             }
         });
-    }
-
-    public void signIn(View view){
-        String userEmail= email.getText().toString();
-        String userPassword= password.getText().toString();
-        if(TextUtils.isEmpty(userEmail)){
-            Toast.makeText(this, "Entrer l'e mail", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if(TextUtils.isEmpty(userPassword)){
-            Toast.makeText(this, "Entrer le password", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if(userPassword.length()<8){
-            Toast.makeText(this, "le mdp est too short, il faut au minimum 8 char", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        auth.signInWithEmailAndPassword(userEmail,userPassword)
-                .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(LoginActivity.this, "Login Successful" ,Toast.LENGTH_SHORT );
-                            startActivity(new Intent(LoginActivity.this , MainActivity.class));
-                        }else{
-                            Toast.makeText(LoginActivity.this , "Error"+task.getException() , Toast.LENGTH_SHORT);
-                        }
-                    }});
     }
     public void singup(android.view.View view) {
         startActivity(new Intent(LoginActivity.this, MainActivity.class));}
