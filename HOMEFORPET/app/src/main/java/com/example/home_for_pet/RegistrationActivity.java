@@ -6,22 +6,43 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistrationActivity extends AppCompatActivity {
     EditText name,email,password;
+    private FirebaseAuth auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
         getSupportActionBar().hide();
+        auth=FirebaseAuth.getInstance();
+        if(auth.getCurrentUser() !=null){
+            startActivity(new Intent(RegistrationActivity.this,MainActivity.class));
+        }
         name=findViewById(R.id.name);
-        name=findViewById(R.id.email);
-        name=findViewById(R.id.password);
+        email=findViewById(R.id.email);
+        password=findViewById(R.id.password);
+        ImageButton create = (ImageButton)findViewById(R.id.sign_up_on_sign_up);
+        create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegistrationActivity.this,MainActivity.class));
+            }
+        });
     }
+
     public void signup(View view){
+
         String userName= name.getText().toString();
         String userEmail= email.getText().toString();
         String userPassword= password.getText().toString();
@@ -41,6 +62,19 @@ public class RegistrationActivity extends AppCompatActivity {
             Toast.makeText(this, "le mdp est too short, il faut au minimum 8 char", Toast.LENGTH_SHORT).show();
             return;
         }
-        startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+        auth.createUserWithEmailAndPassword(userEmail,userPassword)
+                .addOnCompleteListener(RegistrationActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(RegistrationActivity.this, "Successfully Registred" ,Toast.LENGTH_SHORT );
+                        startActivity(new Intent(RegistrationActivity.this , MainActivity.class));
+                    }else{
+                        Toast.makeText(RegistrationActivity.this , "Registration Failed"+task.getException() , Toast.LENGTH_SHORT);
+                    }
+        }});
     }
+        public void singin(android.view.View view) {
+            startActivity(new Intent(RegistrationActivity.this, MainActivity.class));}
+
 }
