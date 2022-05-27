@@ -577,7 +577,6 @@
                 android:id="@+id/imageView21"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:translationy="-15dp"
                 android:background="@drawable/a999_removebg_preview" />
         </LinearLayout>
 
