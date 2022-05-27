@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity{
         auth = FirebaseAuth.getInstance();
         final EditText email = findViewById(R.id.email);
         final EditText password = findViewById(R.id.password);
-        final ImageButton loginBtn = findViewById(R.id.sign_in_on_sign_in);
+        final Button loginBtn = findViewById(R.id.sign_in_on_sign_in);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
