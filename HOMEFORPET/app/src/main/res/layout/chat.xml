@@ -59,18 +59,18 @@
 
                     <ImageView
                         android:id="@+id/imageView11"
-                        android:layout_width="69dp"
+                        android:layout_width="3dp"
                         android:layout_height="54dp"
                         android:layout_gravity="left"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/avt_removebg_preview" />
+                        android:background="@drawable/avt_removebg_preview" />
 
                     <ImageView
                         android:id="@+id/imageView12"
                         android:layout_width="8dp"
                         android:layout_height="54dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/profil"/>
+                        android:background="@drawable/profil"/>
 
                     <TextView
                         android:id="@+id/textView3"
