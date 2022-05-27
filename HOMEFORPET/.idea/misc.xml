@@ -18,11 +18,13 @@
         <entry key="..\:/Users/My pc/Documents/GitHub/HOME-FOR-PET/HOMEFORPET/app/src/main/res/layout/sign_in.xml" value="0.14" />
         <entry key="..\:/Users/My pc/Documents/GitHub/HOME-FOR-PET/HOMEFORPET/app/src/main/res/layout/sign_up.xml" value="0.25" />
         <entry key="..\:/Users/My pc/Documents/GitHub/HOME-FOR-PET/HOMEFORPET/app/src/main/res/layout/verification.xml" value="0.25" />
+        <entry key="..\:/Users/NANOTEK/Documents/GitHub/prjAnass/HOMEFORPET/app/src/main/res/layout/home_page.xml" value="0.1" />
+        <entry key="..\:/Users/NANOTEK/Documents/GitHub/prjAnass/HOMEFORPET/app/src/main/res/layout/landing_page.xml" value="0.1" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
