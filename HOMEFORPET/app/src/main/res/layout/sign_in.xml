@@ -7,7 +7,7 @@
     android:background="#F5F5FA"
     android:orientation="vertical"
     android:weightSum="7"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,6 +87,8 @@
                     android:layout_marginRight="10dp"
                     android:fontFamily="@font/inter_thin"
                     android:hint=" Ex: abc@example.com"
+                    android:id="@+id/email"
+                    android:textColor="#000000"
                     android:layout_marginTop="10dp"
                     android:inputType="textEmailAddress"
                     android:textColorHint="#C8C8C8"
@@ -134,9 +136,11 @@
                     android:layout_marginRight="10dp"
                     android:fontFamily="@font/inter_thin"
                     android:hint=" ............................................"
+                    android:textColor="#000000"
                     android:textSize="24sp"
                     android:inputType="textPassword"
                     android:textColorHint="#C8C8C8"
+                    android:id="@+id/password"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -159,7 +163,7 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <ImageButton
+            <Button
                 android:id="@+id/sign_in_on_sign_in"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

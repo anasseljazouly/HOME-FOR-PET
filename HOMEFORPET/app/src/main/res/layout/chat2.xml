@@ -57,8 +57,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1">
 
-                    <ImageView
-                        android:id="@+id/imageView11"
+                    <Button
+                        android:id="@+id/backBtn"
                         android:layout_width="3dp"
                         android:layout_height="54dp"
                         android:layout_gravity="left"
@@ -66,19 +66,20 @@
                         android:background="@drawable/avt_removebg_preview" />
 
                     <ImageView
-                        android:id="@+id/imageView12"
+                        android:id="@+id/profilpic"
                         android:layout_width="8dp"
                         android:layout_height="54dp"
                         android:layout_weight="1"
                         android:background="@drawable/profil"/>
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/user_name"
                         android:layout_width="wrap_content"
                         android:layout_height="37dp"
                         android:layout_weight="1"
                         android:gravity="center|center_horizontal|center_vertical"
                         android:text="Khaoula EL-BOUCHTI"
+                        android:textColor="#000000"
                         android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
 
                     <TextView
@@ -133,83 +134,15 @@
                 android:clipToPadding="false"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/message_body"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:background="@drawable/my_message"
-                    android:elevation="2dp"
-                    android:padding="10dp"
-                    android:text="Bonjour Nourya ,comment vas-tu?"
-                    android:textColor="#fff"
-                    android:textSize="18dp" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="427dp"
+                    android:id="@+id/messagesRecyclerView"/>
 
-                <TextView
-                    android:id="@+id/message_t"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:text="23:20"
-                    android:textSize="10dp" />
 
-                <TextView
-                    android:id="@+id/message_b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:background="@drawable/their_message"
-                    android:elevation="2dp"
-                    android:padding="10dp"
-                    android:text="Bonjour Khaoula"
-                    android:textColor="#fff"
-                    android:textSize="18dp" />
-                <TextView
-                    android:id="@+id/messag_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="23:25"
-                    android:textSize="10dp" />
-                <TextView
-                    android:id="@+id/messg_b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:background="@drawable/their_message"
-                    android:elevation="2dp"
-                    android:padding="10dp"
-                    android:text="vous êtes dispnible mercredi matin?"
-                    android:textColor="#fff"
-                    android:textSize="18dp" />
 
-                <TextView
-                    android:id="@+id/message_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="23:25"
-                    android:textSize="10dp" />
 
-                <TextView
-                    android:id="@+id/messag_b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:background="@drawable/my_message"
-                    android:elevation="2dp"
-                    android:padding="10dp"
-                    android:text="oui ....."
-                    android:textColor="#fff"
-                    android:textSize="18dp" />
 
-                <TextView
-                    android:id="@+id/message_ti"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:text="23:26"
-                    android:textSize="10dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -248,12 +181,13 @@
                         android:textColor="@color/white" />
 
                     <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="25dp"
+                        android:layout_height="23dp"
                         android:layout_gravity="center"
                         android:layout_marginHorizontal="10dp"
                         android:background="@drawable/ic_send"
                         android:onClick="sendMessage"
+                        android:id="@+id/sendmsg"
                         android:padding="20dp"
                         android:scaleType="fitCenter" />
                 </LinearLayout>
