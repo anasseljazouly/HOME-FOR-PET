@@ -35,7 +35,8 @@ public class HomeFragment extends Fragment {
     List<CategoryModel> categoryModelList;
 
     //FireSrtore
-    FirebaseFirestore db;
+    //FirebaseFirestore db;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     public HomeFragment() {
         // Required empty public constructor
@@ -57,7 +58,7 @@ public class HomeFragment extends Fragment {
         categoryModelList=new ArrayList<>();
         categoryAdapter=new CategoryAdapter(getActivity(),categoryModelList);
         catRecyclerView.setAdapter(categoryAdapter);
-        db.collection("category")
+        db.collection("Category")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
