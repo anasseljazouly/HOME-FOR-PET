@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">523156109824-g1jfobho3sccs1ec8lc2vv80g70a6h72.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">523156109824</string>
+    <string name="google_api_key" translatable="false">AIzaSyCw-TPrmHyWUkff1cb7bT9vGr20VdcLOEA</string>
+    <string name="google_app_id" translatable="false">1:523156109824:android:a1a95bb96501ba07e4f6e5</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCw-TPrmHyWUkff1cb7bT9vGr20VdcLOEA</string>
+    <string name="google_storage_bucket" translatable="false">home-for-pet.appspot.com</string>
+    <string name="project_id" translatable="false">home-for-pet</string>
+</resources>
